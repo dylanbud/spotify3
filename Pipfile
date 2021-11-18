@@ -10,6 +10,7 @@ pandas = "*"
 requests = "*"
 scikit-learn = "*"
 spotipy = "*"
+gunicorn = "*"
 
 [dev-packages]
 
