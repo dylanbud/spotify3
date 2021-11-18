@@ -19,7 +19,7 @@ def create_app():
             artist = request.form.get('artist', 'default')
             track = request.form.get('track', 'default')
             df = convert(artist, track)
-            rec = get_recommendation(track, artist)
+            rec = get_recommendation(artist, track)
         return render_template('data.html', form_data=form_data, artist=artist, track=track, df=df, rec=rec)
 
     return app

@@ -15,8 +15,7 @@ Song_data = pd.read_csv('spotify/Song_data.csv', index_col=0)
 
 
 def convert(artist, track):
-    track_search = spotify.search(
-        q='artist:' + artist + ' track:' + track, type='track', limit=1, market='US')
+    track_search = spotify.search(q='artist:' + artist + ' track:' + track, type='track', limit=1, market='US')
     if track_search['tracks']['total'] == 0:
         df = pd.DataFrame(data={'danceability': [3]})
         return df
