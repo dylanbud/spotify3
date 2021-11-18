@@ -10,8 +10,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 # Initalize spotipy
 spotify = spotipy.Spotify(
     client_credentials_manager=SpotifyClientCredentials())
-model = pickle.load(open('model.pkl', 'rb'))
-Song_data = pd.read_csv('Song_data.csv', index_col=0)
+model = pickle.load(open('spotify/model.pkl', 'rb'))
+Song_data = pd.read_csv('spotify/Song_data.csv', index_col=0)
 
 
 def convert(artist, track):
