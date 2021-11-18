@@ -26,8 +26,8 @@ def convert(artist, track):
     return (df)
 
 
-def get_recommendation(user_song, user_artist_name):
-    user_song_data = convert(user_song, user_artist_name)
+def get_recommendation(track, artist):
+    user_song_data = convert(track, artist)
     rec_raw = model.kneighbors(user_song_data, 5, return_distance=False)
     rec_list = rec_raw.tolist()[0]
     return Song_data.iloc[rec_list]

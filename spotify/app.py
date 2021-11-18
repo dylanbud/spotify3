@@ -1,5 +1,7 @@
 from flask import Flask,render_template,request
 from .user_input import *
+from .recommendation import *
+
 def create_app():
     # initializes our app
     app = Flask(__name__)
@@ -18,7 +20,8 @@ def create_app():
             artist = request.form.get('artist', 'default')
             track = request.form.get('track', 'default')
             df = convert(artist, track)
-        return render_template('data.html',form_data = form_data, artist=artist, track=track, df = df)
+            rec = get_recommendation(track, artist)
+        return render_template('data.html',form_data = form_data, artist=artist, track=track, df = df, rec=rec)
   
     return app
 
