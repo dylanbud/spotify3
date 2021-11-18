@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Spotify - {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic" />
+  </head>
+
+  <body>
+    <article class="flex two" style="padding: 3em 1em;">
+      {% block content %}
+ 
+        <form action="/data" method = "POST">
+          <p>Artist Name <input type = "text" name = "artist" /></p>
+          <p>Song Name <input type = "text" name = "track" /></p>
+          <p><input type = "submit" value = "Submit" /></p>
+      </form>
+
+      </div>
+      {% endblock %}
+    </article>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/umbrellajs"/> -->
+  </body>
+
+</html>
