@@ -1,3 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <style>
+        ol.s {list-style-type: inherit;}
+    </style>
+        <title>Spotify Song Recommender</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
 <h1> The artist requested is: {{artist}} </h1>
 <p> The track requested is: {{track}} </p>
 <p> Your song recommendations are: {{rec.to_html() | safe}} </p>
+<div class="container" id=footer>
+    <form action="/">
+        <button type="submit">Go Back</button>
+    </form>
+</div>
+</html>
